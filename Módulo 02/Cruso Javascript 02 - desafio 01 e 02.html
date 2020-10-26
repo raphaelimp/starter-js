@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cruso Javascript 02</title>
+</head>
+<body>	
+	<div id="cont">
+		<button id="btnCria">Criar</button>
+	</div>
+	<div id='espacoCria'></div>
+
+	<script type="text/javascript">
+		var criarNovo = document.querySelector('#btnCria');
+		var espacoCria = document.querySelector('#espacoCria');
+		var novoQ;
+		
+		criarNovo.onclick = function(){
+			var novoQ = document.createElement('div');
+			novoQ.style.width = "100px";
+			novoQ.style.height = "100px";
+			novoQ.style.backgroundColor = '#f00';
+			novoQ.style.margin = "10px"
+			espacoCria.appendChild(novoQ);
+
+			novoQ.onmouseover = function(i){
+				var quadA = i.target;
+				var newC = getNewColor();
+
+				quadA.style.backgroundColor = newC;
+				};
+		}
+
+
+		function getNewColor(){
+			var letras = "0123456789ABCDEF";
+			var color = "#";
+			
+			for(i=0; i<6; i++){
+				color += letras[Math.floor(Math.random() * 16)];
+			};
+
+			return color;
+		};
+
+	</script>
+</body>
+</html>

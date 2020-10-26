@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curos Javascript 01 - Desafio 02</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		var alunos = [
+		{
+			nome: "Diego",
+			habilidades: ["Javascript", "ReactJS", "Reduz"]
+		}, 
+		{
+			nome: "Gabriel",
+			habilidades: ["VuwJS", "Ruby on Rails", "Flixir"]
+		}]
+
+		function habilidadesAlunos(alunos) {
+			for (let aluno of alunos) {
+				var alunoVez = "O " + aluno.nome + " possui as habilidades: " + aluno.habilidades.join(" ")
+				console.log (alunoVez)
+			}
+		}
+
+		habilidadesAlunos(alunos)
+
+	</script>
+</body>
+</html>

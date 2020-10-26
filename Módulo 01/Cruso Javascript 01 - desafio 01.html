@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso Javascript 01</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		var endereco = {
+			rua: "Rua dos pinheiros",
+			numero: 1293,
+			bairro: "Centro",
+			cidade: "São Paulo",
+			uf: "SP"
+		}
+
+		function rendereco(val){
+			var rua = " na rua " +val.rua;
+			var numero = " com n° " +val.numero; 
+			var bairro = " no " +val.bairro;
+			var cidade = "/" +val.cidade;
+			var uf = "O usuário mora em " +val.uf;
+			return uf + cidade + bairro + cidade + rua + numero;
+		}
+
+		console.log(rendereco(endereco))
+	</script>
+</body>
+</html>>

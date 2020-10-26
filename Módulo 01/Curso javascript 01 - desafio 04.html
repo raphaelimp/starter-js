@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curos Javascript 01 - Desafio 02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var anosDeEstudo = 4;
+
+		function experiencia(tempoDeEstudo) {
+			switch (tempoDeEstudo) {
+				case 0:
+				case 1:
+					return "Iniciante";
+					break;
+				case 2:
+				case 3: 
+					return "Intermediário";
+					break;
+				case 4:
+				case 5:
+				case 6:
+					return "Avançado";
+					break;
+				default: 
+					return "Jedi Mester";
+			}
+
+		};
+
+		console.log(experiencia(anosDeEstudo));
+
+	</script>
+</body>
+</html>

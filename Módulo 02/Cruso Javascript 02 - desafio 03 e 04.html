@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cruso Javascript 02</title>
+</head>
+<body>	
+	<div id="cont">
+		<input type="text" name="nome" id='inputNome'></input>
+		<button onclick="adicionar()">Adicionor</button>
+	</div>
+	<div id='espacoCria'></div>
+
+	<script type="text/javascript">
+		var nomes = ['Diego', 'Gabriel', 'Lcas'];
+		var listaEspeco = document.querySelector('#cont');
+		var listaUl = document.createElement('ul');
+		listaEspeco.appendChild(listaUl);
+		
+
+		var textLista;
+		var listaElement;
+
+		function criarLista(lista){
+			if(listaUl.hasChildNodes()) {
+				while(listaUl.firstChild){
+					listaUl.removeChild(listaUl.firstChild)
+				}
+			};
+
+			for (var i=0; i<lista.length; i++){
+				listaElement = document.createElement('li');
+				textLista = document.createTextNode(lista[i]);
+
+				listaUl.appendChild(listaElement);
+				listaElement.appendChild(textLista);
+			};
+
+		};
+
+		function adicionar(){
+			var novoNome = document.getElementById('inputNome').value;
+			if (novoNome != '') {
+				nomes.push(novoNome);
+				document.getElementById('inputNome').value = '';		
+				criarLista(nomes);
+			};
+			
+		}
+
+		criarLista(nomes);
+
+	</script>
+</body>
+</html>
